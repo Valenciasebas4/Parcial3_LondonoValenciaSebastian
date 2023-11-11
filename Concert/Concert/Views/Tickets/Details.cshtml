@@ -8,6 +8,11 @@
 
 <div>
     <h4>Ticket</h4>
+    <br />
+    @if (TempData["boletaUsada"] != null)
+    {
+        <div class="alert alert-success">@TempData["boletaUsada"]</div>
+    }
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
