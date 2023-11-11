@@ -83,7 +83,7 @@ namespace Concert.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,UseDate,IsUsed,EntranceGate")] Ticket ticket)
+        public async Task<IActionResult> Create(Ticket ticket)
         {
             if (ModelState.IsValid)
             {
@@ -116,7 +116,7 @@ namespace Concert.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Id,UseDate,IsUsed,EntranceGate")] Ticket ticket)
+        public async Task<IActionResult> Edit(Guid id,  Ticket ticket)
         {
             if (id != ticket.Id)
             {
