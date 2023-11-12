@@ -29,7 +29,7 @@ namespace Concert.DAL
                 for (int i = 0; i < 1000; i++)
                 {
                     Guid newGuid = Guid.NewGuid();
-                    _context.Tickets.Add(new Ticket { Id = newGuid, EntranceGate = null, IsUsed = false, UseDate = DateTime.Now });
+                    _context.Tickets.Add(new Ticket { Id = newGuid, EntranceGate = null, IsUsed = false, UseDate = null });
                 }
 
                 await _context.SaveChangesAsync();
