@@ -19,6 +19,15 @@ namespace Parcial3_LondonoValenciaSebastian.DAL
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Ticket>().HasIndex(c => c.Id).IsUnique();
+
+        }
+
+
+        /*
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
 
             for (int i = 0; i < 30; i++)
             {
@@ -33,7 +42,7 @@ namespace Parcial3_LondonoValenciaSebastian.DAL
                 );
             }
         }
-
+        */
 
 
     }
